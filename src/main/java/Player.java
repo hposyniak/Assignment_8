@@ -55,7 +55,7 @@ public class Player {
     }
 
     public void setGettingOutOfPenaltyBox(boolean gettingOutOfPenaltyBox) {
-        isGettingOutOfPenaltyBox = gettingOutOfPenaltyBox;
+        this.isGettingOutOfPenaltyBox = gettingOutOfPenaltyBox;
     }
 
     public boolean isGettingOutOfPenaltyBox() {

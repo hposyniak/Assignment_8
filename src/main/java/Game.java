@@ -92,7 +92,7 @@ public class Game {
 
             if (roll % 2 != 0) {
 
-                getOutOfPenaltyBox();
+                getOutOfPenaltyBox(currentPlayer);
 
                 move(roll);
 
@@ -112,11 +112,12 @@ public class Game {
 
     }
 
-    public void getOutOfPenaltyBox(){
+    public void getOutOfPenaltyBox(Player player){
 
-        currentPlayer.setGettingOutOfPenaltyBox(true);
+        player.setGettingOutOfPenaltyBox(true);
+        player.setInPenaltyBox(false);
 
-        System.out.println(currentPlayer.getName() + " is getting out of the penalty box");
+        System.out.println(player.getName() + " is getting out of the penalty box");
 
     }
 

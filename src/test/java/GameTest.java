@@ -9,7 +9,6 @@ import static org.junit.Assert.*;
 
 public class GameTest {
 
-    // roll method
 
     // The correct/incorrect answering of questions
 
@@ -30,14 +29,67 @@ public class GameTest {
         player2 = new Player("Mia",0,0,false);
         player3 = new Player("Alex",0,0,false);
 
-        game.addPlayer(player1);
-        game.addPlayer(player2);
-        game.addPlayer(player3);
     }
 
     @Test
-    public void testRoll(){
+    public void testIsPlayableOnePlayer(){
+     game.addPlayer(player1);
 
+     assertFalse(game.isPlayable());
+
+    }
+
+    @Test
+    public void testIsPlayableTwoPlayers(){
+        game.addPlayer(player1);
+        game.addPlayer(player2);
+
+        assertTrue(game.isPlayable());
+
+    }
+
+    @Test
+    public void testIsPlayableMoreThanTwoPlayers(){
+        game.addPlayer(player1);
+        game.addPlayer(player2);
+        game.addPlayer(player3);
+
+        assertTrue(game.isPlayable());
+
+    }
+    @Test
+    public void testRollInPenaltyBoxAndRollOdd() {
+        game.addPlayer(player1);
+        player1.setInPenaltyBox(true);
+        game.setCurrentPlayer();
+        game.roll(3);
+        assertFalse(player1.isInPenaltyBox());
+        assertEquals(3, player1.getPlace());
+        assertEquals("Rock", game.currentCategory().getName());
+    }
+
+    @Test
+    public void testRollInPenaltyBoxAndRollEven() {
+        game.addPlayer(player1);
+        player1.setInPenaltyBox(true);
+        game.setCurrentPlayer();
+        game.roll(4);
+        assertTrue(player1.isInPenaltyBox());
+    }
+
+    @Test
+    public void testRollNotInPenaltyBox() {
+        game.addPlayer(player1);
+        game.setCurrentPlayer();
+        game.roll(5);
+        assertEquals(5, player1.getPlace());
+        assertEquals("Science", game.currentCategory().getName());
+    }
+
+
+    @Test
+    public void testRoll(){
+        game.addPlayer(player1);
         game.setCurrentPlayer();
         game.roll(3);
 
@@ -49,7 +101,7 @@ public class GameTest {
 
     @Test
     public void testCorrectAnswer(){
-
+        game.addPlayer(player1);
         game.setCurrentPlayer();
         game.correctAnswer();
 
@@ -58,18 +110,29 @@ public class GameTest {
     }
 
     @Test
-    public void testWrongAnswer(){
-
+    public void testCorrectAnswerInPenaltyBoxIsGettingOut() {
+        game.addPlayer(player1);
+        player1.setInPenaltyBox(true);
+        player1.setGettingOutOfPenaltyBox(true);
         game.setCurrentPlayer();
-        game.wrongAnswer();
 
-        assertTrue(player1.isInPenaltyBox());
+        assertEquals(1, player1.getCoins());
 
     }
 
     @Test
-    public void testCurrentCategory(){
+    public void testWrongAnswer(){
+        game.addPlayer(player1);
+        game.setCurrentPlayer();
+        game.wrongAnswer();
 
+        assertTrue(player1.isInPenaltyBox());
+        assertEquals(0, player1.getCoins());
+    }
+
+    @Test
+    public void testCurrentCategory(){
+        game.addPlayer(player1);
         game.setCurrentPlayer();
 
         player1.setPlace(0);
@@ -112,17 +175,35 @@ public class GameTest {
 
     @Test
     public void testAskQuestion(){
-
+        game.addPlayer(player1);
         game.setCurrentPlayer();
         Category science = game.currentCategory();
         game.askQuestion();
-
-
 
         assertEquals(49,science.howManyQuestionsLeft());
 
     }
 
+    @Test
+    public void testMoveUsual(){
+
+        game.addPlayer(player1);
+        game.setCurrentPlayer();
+        game.move(4);
+        assertEquals(4,player1.getPlace());
+
+    }
+
+    @Test
+    public void testMoveWrap(){
+
+        game.addPlayer(player1);
+        game.setCurrentPlayer();
+        player1.setPlace(10);
+        game.move(4);
+        assertEquals(2,player1.getPlace());
+
+    }
 
 
 
