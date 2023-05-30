@@ -40,5 +40,7 @@ public class GameRunner {
 
         } while (notAWinner);
 
+        System.out.println("Game is finished!!!!");
+
     }
 }
