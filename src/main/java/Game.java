@@ -121,13 +121,14 @@ public class Game {
 
     private void askQuestion() {
         // Asks a question based on the current category
-        if (currentCategory() == "Pop")
+
+        if (currentCategory().equals("Pop"))
             pop.removeQuestion();
-        if (currentCategory() == "Science")
+        if (currentCategory().equals("Science"))
             science.removeQuestion();
-        if (currentCategory() == "Sports")
+        if (currentCategory().equals("Sports"))
             sports.removeQuestion();
-        if (currentCategory() == "Rock")
+        if (currentCategory().equals("Rock"))
             rock.removeQuestion();
     }
 
