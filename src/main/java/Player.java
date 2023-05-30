@@ -9,6 +9,7 @@ public class Player {
     private int coins;  // Keeps track of how many coins a player has
     private boolean inPenaltyBox;  // Either true or false, depending on whether the player is ina penalty box or not
 
+    private boolean isGettingOutOfPenaltyBox;
     public Player(String name, int place, int coins, boolean inPenaltyBox) {
         // Constructor method
 
@@ -51,5 +52,13 @@ public class Player {
     public void setInPenaltyBox(boolean inPenaltyBox) {
         // InPenaltyBox setter
         this.inPenaltyBox = inPenaltyBox;
+    }
+
+    public void setGettingOutOfPenaltyBox(boolean gettingOutOfPenaltyBox) {
+        isGettingOutOfPenaltyBox = gettingOutOfPenaltyBox;
+    }
+
+    public boolean isGettingOutOfPenaltyBox() {
+        return isGettingOutOfPenaltyBox;
     }
 }

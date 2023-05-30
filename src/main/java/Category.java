@@ -8,6 +8,11 @@ public class Category {
     private String name;
     private LinkedList questions = new LinkedList();
 
+    public int howManyQuestionsLeft(){
+
+        return questions.size();
+    }
+
     public Category(String name) {
         // constructor method
         this.name = name;

@@ -12,14 +12,16 @@ public class GameRunner {
         Player Pat = new Player("Pat",0,0,false);
         Player Sue = new Player("Sue",0,0,false);
 
-        aGame.add(Chet);
-        aGame.add(Pat);
-        aGame.add(Sue);
+        aGame.addPlayer(Chet);
+        aGame.addPlayer(Pat);
+        aGame.addPlayer(Sue);
+
 
 
         Random rand = new Random();
 
         do {
+            aGame.setCurrentPlayer();
 
             if(!aGame.isPlayable()){
 
