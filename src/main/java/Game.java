@@ -5,15 +5,16 @@
 //
 // SMELL 1 - Primitive Obsession
 //
-//    Player and question should be objects, it would be much easier (and cleaner) if player and question were
-//    object classes. The player class would keep track where on the board the player is, how many gold coins they have
-//    and whether they are in a penalty box. The question class would keep track of all the questions and their types.
+//    Player, question and categories should be objects, it would be much easier (and cleaner) if player, question
+//    and category were object classes. The player class would keep track where on the board the player is, how many gold coins they have
+//    and whether they are in a penalty box. The question class would keep track of the question contents and their categories, category class
+//    will keep track of its name and questions it has
 //    This smell is bad because it makes the code harder to read and adds unnecessary complications
 //    and possible errors.
 //
 //SMELL 2 - Long Method
 //
-//    Method roll() is 38 lines long, usually when a method exceeds 10 lines of code we should look
+//    Method roll() is way above 10 lines long, usually when a method exceeds 10 lines of code we should look
 //    into how to keep them shorter.
 //
 //SMELL 3 - Duplicate Code
@@ -26,7 +27,7 @@
 // - the howManyPlayers() method is never used, which means the game never checks if there is enough players to play
 // - the code has poor structure, is hard to read. The methods are not in order and have inconsistent names which makes
 //	it harder to use them.
-// - the code neither handles nor reports errors or exceptions which may lead to unexpected behaviours
+// - the amount of players and questions is hardcoded
 
 
 import java.util.ArrayList;
@@ -37,8 +38,6 @@ public class Game {
     private final Category science = new Category("Science");
     private final Category sports = new Category("Sports");
     private final Category rock = new Category("Rock");
-
-    //int token = 0; // renamed the previous currentPlayer int variable to token, as in the current player has the token
     int token = 0; // current player has a token that is like a pointer, it means they are the current player
     Player currentPlayer;
 
@@ -59,16 +58,16 @@ public class Game {
     }
 
     public void setCurrentPlayer(){
-
+        //sets current player
         currentPlayer = players.get(token);
 
     }
 
 
-    public Game() {
+    public Game(int questions) {
         // Adds questions to categories
 
-        for (int i = 0; i < 50; i++) {
+        for (int i = 1; i < questions+1; i++) {
 
             pop.addQuestion(i);
             science.addQuestion(i);

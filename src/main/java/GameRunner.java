@@ -9,7 +9,7 @@ public class GameRunner {
 
     public static void main(String[] args) {
 
-        Game aGame = new Game();
+        Game aGame = new Game(50);
 
         Player Chet = new Player("Chet",0,0,false);
         Player Pat = new Player("Pat",0,0,false);

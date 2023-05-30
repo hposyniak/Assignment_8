@@ -24,7 +24,7 @@ public class GameTest {
     @Before
     public void setUp(){
 
-        game = new Game();
+        game = new Game(50);
 
         player1 = new Player("Jim",0,0,false);
         player2 = new Player("Mia",0,0,false);
