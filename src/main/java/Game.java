@@ -1,4 +1,7 @@
-//Deliverable 1:
+// Yuri Manna, i6316134
+// Helena Posyniak, i6303009
+//
+// Deliverable 1:
 //
 // SMELL 1 - Primitive Obsession
 //
@@ -65,7 +68,7 @@ public class Game {
     public Game() {
         // Adds questions to categories
 
-        for (int i = 1; i < 51; i++) {
+        for (int i = 0; i < 50; i++) {
 
             pop.addQuestion(i);
             science.addQuestion(i);
@@ -143,13 +146,13 @@ public class Game {
     public void askQuestion() {
         // Asks a question based on the current category
 
-        if (currentCategory().equals("Pop"))
+        if (currentCategory().getName().equals("Pop"))
             pop.removeQuestion();
-        if (currentCategory().equals("Science"))
+        if (currentCategory().getName().equals("Science"))
             science.removeQuestion();
-        if (currentCategory().equals("Sports"))
+        if (currentCategory().getName().equals("Sports"))
             sports.removeQuestion();
-        if (currentCategory().equals("Rock"))
+        if (currentCategory().getName().equals("Rock"))
             rock.removeQuestion();
     }
 

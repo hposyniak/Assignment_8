@@ -1,3 +1,6 @@
+//    Yuri Manna, i6316134
+//    Helena Posyniak, i6303009
+
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -38,7 +41,7 @@ public class GameTest {
         game.setCurrentPlayer();
         game.roll(3);
 
-        assertEquals("Science",game.currentCategory());
+        assertEquals("Rock",game.currentCategory().getName());
 
         assertEquals(3,player1.getPlace());
 
@@ -70,40 +73,40 @@ public class GameTest {
         game.setCurrentPlayer();
 
         player1.setPlace(0);
-        assertEquals("Pop",game.currentCategory());
+        assertEquals("Pop",game.currentCategory().getName());
 
         player1.setPlace(1);
-        assertEquals("Science",game.currentCategory());
+        assertEquals("Science",game.currentCategory().getName());
 
         player1.setPlace(2);
-        assertEquals("Sports",game.currentCategory());
+        assertEquals("Sports",game.currentCategory().getName());
 
         player1.setPlace(3);
-        assertEquals("Rock",game.currentCategory());
+        assertEquals("Rock",game.currentCategory().getName());
 
         player1.setPlace(4);
-        assertEquals("Pop",game.currentCategory());
+        assertEquals("Pop",game.currentCategory().getName());
 
         player1.setPlace(5);
-        assertEquals("Science",game.currentCategory());
+        assertEquals("Science",game.currentCategory().getName());
 
         player1.setPlace(6);
-        assertEquals("Sports",game.currentCategory());
+        assertEquals("Sports",game.currentCategory().getName());
 
         player1.setPlace(7);
-        assertEquals("Rock",game.currentCategory());
+        assertEquals("Rock",game.currentCategory().getName());
 
         player1.setPlace(8);
-        assertEquals("Pop",game.currentCategory());
+        assertEquals("Pop",game.currentCategory().getName());
 
         player1.setPlace(9);
-        assertEquals("Science",game.currentCategory());
+        assertEquals("Science",game.currentCategory().getName());
 
         player1.setPlace(10);
-        assertEquals("Sports",game.currentCategory());
+        assertEquals("Sports",game.currentCategory().getName());
 
         player1.setPlace(11);
-        assertEquals("Rock",game.currentCategory());
+        assertEquals("Rock",game.currentCategory().getName());
 
     }
 
@@ -111,9 +114,10 @@ public class GameTest {
     public void testAskQuestion(){
 
         game.setCurrentPlayer();
+        Category science = game.currentCategory();
         game.askQuestion();
 
-        Category science = game.currentCategory();
+
 
         assertEquals(49,science.howManyQuestionsLeft());
 

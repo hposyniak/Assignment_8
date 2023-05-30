@@ -1,3 +1,6 @@
+//    Yuri Manna, i6316134
+//    Helena Posyniak, i6303009
+
 import java.util.Random;
 
 public class GameRunner {

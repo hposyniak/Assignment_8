@@ -34,6 +34,7 @@ public class Category {
         // removes a question from the list
 
         System.out.println(questions.removeFirst());
+        //System.out.println(questions.size());
 
     }
 }

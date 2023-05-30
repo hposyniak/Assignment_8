@@ -4,3 +4,5 @@ Group number 96:
 
     Yuri Manna, i6316134 
     Helena Posyniak, i6303009
+
+the tests are in src/test/java/GameTest.java
