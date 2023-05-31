@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e60b48a9-8acf-4ec4-a4e0-03ed3dbf32e1" name="Changes" comment=".">
-      <change beforePath="$PROJECT_DIR$/Report_Group69_6303009_6316134.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Report_Group69_6303009_6316134.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GameTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +78,16 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GameTest.testCorrectAnswerInPenaltyBoxIsGettingOut">
+  <component name="RunManager" selected="JUnit.GameTest">
+    <configuration name="GameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Assignment_8.test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GameTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GameTest.testCorrectAnswerInPenaltyBox" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Assignment_8.test" />
       <option name="PACKAGE_NAME" value="" />
@@ -110,16 +118,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameTest.testRollInPenaltyBoxAndRollOdd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Assignment_8.test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GameTest" />
-      <option name="METHOD_NAME" value="testRollInPenaltyBoxAndRollOdd" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="GameTest.testWrongAnswer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Assignment_8.test" />
       <option name="PACKAGE_NAME" value="" />
@@ -132,11 +130,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameTest" />
         <item itemvalue="JUnit.GameTest.testCorrectAnswerInPenaltyBoxIsGettingOut" />
         <item itemvalue="JUnit.GameTest.testWrongAnswer" />
         <item itemvalue="JUnit.GameTest.testCorrectAnswerInPenaltyBox" />
         <item itemvalue="JUnit.GameTest.testCorrectAnswer_InPenaltyBox" />
-        <item itemvalue="JUnit.GameTest.testRollInPenaltyBoxAndRollOdd" />
       </list>
     </recent_temporary>
   </component>
@@ -150,7 +148,7 @@
       <updated>1685465418435</updated>
       <workItem from="1685465419510" duration="16482000" />
       <workItem from="1685484912101" duration="186000" />
-      <workItem from="1685485111600" duration="735000" />
+      <workItem from="1685485111600" duration="1381000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1685465963179</created>
@@ -215,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685485126211</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary=".">
+      <created>1685558669685</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1685558669685</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
