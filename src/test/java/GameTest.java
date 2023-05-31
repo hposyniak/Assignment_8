@@ -112,9 +112,10 @@ public class GameTest {
     @Test
     public void testCorrectAnswerInPenaltyBoxIsGettingOut() {
         game.addPlayer(player1);
+        game.setCurrentPlayer();
         player1.setInPenaltyBox(true);
         player1.setGettingOutOfPenaltyBox(true);
-        game.setCurrentPlayer();
+        game.correctAnswer();
 
         assertEquals(1, player1.getCoins());
 
